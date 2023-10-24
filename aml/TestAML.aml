@@ -36,6 +36,7 @@
   <RoleClassLib Name="MyRoleClassLib">
     <Version>0</Version>
     <RoleClass Name="GenericRobot" />
+    <RoleClass Name="GenericLineConveyor" />
   </RoleClassLib>
   <SystemUnitClassLib Name="MySystemUnitClassLib">
     <Version>0</Version>
