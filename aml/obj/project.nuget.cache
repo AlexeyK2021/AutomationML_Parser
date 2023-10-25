@@ -1,20 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "dPrgGXD87Vuq4TkcfjRJ0u6YECaDCNKh7/qOgb6p490uCh7iVSFUhj+0vMPjoUuYXqBfVQfG/Ug4/og1LRgyUA==",
+  "dgSpecHash": "TjpzDioieDDekkFd2Ai+AtKYx4ds+Sq7yUrBaB7WHJD6JOm3rsabvicVpDnhVHgH3zdszu3Hf8uI2GKB/inR0g==",
   "success": true,
-  "projectFilePath": "D:\\Prog\\C#\\AML\\aml\\aml.csproj",
+  "projectFilePath": "/home/alexey/Документы/AutomationML_Parser/aml/aml.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\89151\\.nuget\\packages\\aml.engine\\3.1.7\\aml.engine.3.1.7.nupkg.sha512",
-    "C:\\Users\\89151\\.nuget\\packages\\aml.engine.resources\\2.1.0\\aml.engine.resources.2.1.0.nupkg.sha512",
-    "C:\\Users\\89151\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
-    "C:\\Users\\89151\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
-    "C:\\Users\\89151\\.nuget\\packages\\system.io.packaging\\7.0.0\\system.io.packaging.7.0.0.nupkg.sha512",
-    "C:\\Users\\89151\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
-    "C:\\Users\\89151\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\89151\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\89151\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\89151\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512",
-    "C:\\Users\\89151\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    "/home/alexey/.nuget/packages/aml.engine/3.1.7/aml.engine.3.1.7.nupkg.sha512",
+    "/home/alexey/.nuget/packages/aml.engine.resources/2.1.0/aml.engine.resources.2.1.0.nupkg.sha512",
+    "/home/alexey/.nuget/packages/system.io.packaging/7.0.0/system.io.packaging.7.0.0.nupkg.sha512",
+    "/home/alexey/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
+    "/home/alexey/.nuget/packages/system.text.json/7.0.3/system.text.json.7.0.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.IO;
+using System.Reflection.PortableExecutable;
 using Aml.Engine.CAEX;
 using Aml.Engine.CAEX.Extensions;
 using static System.Console;
@@ -7,7 +9,8 @@ class Hello
 {
     public static void Main()
     {
-        var document = CAEXDocument.LoadFromFile("..\\..\\..\\TestAML.aml");
+        WriteLine("Current Dir:" + Directory.GetCurrentDirectory());
+        var document = CAEXDocument.LoadFromFile("TestAML.aml");
         var elements = document.CAEXFile.InstanceHierarchy;
 
         // foreach (var el in elements)
