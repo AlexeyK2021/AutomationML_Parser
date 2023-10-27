@@ -277,19 +277,19 @@
     ]
   },
   "packageFolders": {
-    "/home/alexey/.nuget/packages/": {}
+    "C:\\Users\\Алексей\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/alexey/Документы/AutomationML_Parser/aml/aml.csproj",
+      "projectUniqueName": "C:\\Users\\Алексей\\Documents\\Prog\\AutomationML_Parser\\aml\\aml.csproj",
       "projectName": "aml",
-      "projectPath": "/home/alexey/Документы/AutomationML_Parser/aml/aml.csproj",
-      "packagesPath": "/home/alexey/.nuget/packages/",
-      "outputPath": "/home/alexey/Документы/AutomationML_Parser/aml/obj/",
+      "projectPath": "C:\\Users\\Алексей\\Documents\\Prog\\AutomationML_Parser\\aml\\aml.csproj",
+      "packagesPath": "C:\\Users\\Алексей\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Алексей\\Documents\\Prog\\AutomationML_Parser\\aml\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/alexey/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Алексей\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -334,7 +334,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -10,7 +10,7 @@ class Hello
     public static void Main()
     {
         WriteLine("Current Dir:" + Directory.GetCurrentDirectory());
-        var document = CAEXDocument.LoadFromFile("TestAML.aml");
+        var document = CAEXDocument.LoadFromFile("../../../TestAML.aml");
         var elements = document.CAEXFile.InstanceHierarchy;
 
         // foreach (var el in elements)
