@@ -9,8 +9,8 @@ class Hello
 {
     public static void Main()
     {
-        WriteLine("Current Dir:" + Directory.GetCurrentDirectory());
-        var document = CAEXDocument.LoadFromFile("../../../TestAML.aml");
+        // WriteLine("Current Dir:" + Directory.GetCurrentDirectory());
+        var document = CAEXDocument.LoadFromFile("../../../../TestAML.aml");
         var elements = document.CAEXFile.InstanceHierarchy;
 
         // foreach (var el in elements)
@@ -19,11 +19,20 @@ class Hello
         // }
 
 
-        foreach (var instanceHierarchy in document.CAEXFile.SystemUnitClassLib)
+        foreach (var instanceHierarchy in document.CAEXFile.InstanceHierarchy)
         {
-            foreach (var internalElement in instanceHierarchy.Descendants<SystemUnitClassType>())
+            WriteLine($"1{instanceHierarchy}: ");
+            foreach (var internalElement in instanceHierarchy.CAEXChildren("InternalElement"))
             {
-                WriteLine(internalElement.Name);
+                WriteLine("\tIE: "+internalElement.Name() + ":");
+                foreach (var ei in internalElement.Descendants<ExternalInterfaceType>())
+                {
+                    WriteLine("\t\tEI: " + ei.Name);
+                }
+                foreach (var rc in internalElement.Descendants<RoleClassType>())
+                {
+                    WriteLine("\t\tRC: " + rc.Name);
+                }
             }
         }
     }
