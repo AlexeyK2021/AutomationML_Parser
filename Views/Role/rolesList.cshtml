@@ -1,0 +1,28 @@
+﻿@using amlWeb.Models.Role
+@model List<RoleClassLib>
+
+<html>
+<head>
+    <meta name="viewport" content="width-device-width"/>
+    <title>Roles List</title>
+</head>
+<body>
+
+@{
+    foreach (var role in Model)
+    {
+        <summary>Name:@role.name {ver=@role.version}</summary>
+        <ul>
+            @{
+                foreach (var rc in role.rolesList)
+                {
+                    <li>
+                        RC: @rc.name
+                    </li>
+                }
+            }
+        </ul>
+    }
+}
+</body>
+</html>

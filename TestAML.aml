@@ -1,6 +1,6 @@
 ﻿<CAEXFile SchemaVersion="3.0" FileName="TestAML.aml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.dke.de/CAEX" xsi:schemaLocation="http://www.dke.de/CAEX CAEX_ClassModel_V.3.0.xsd">
   <SuperiorStandardVersion>AutomationML 2.10</SuperiorStandardVersion>
-  <SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="5.6.10.0" LastWritingDateTime="2023-10-21T20:05:03.3419586+03:00" OriginProjectID="unspecified" OriginProjectTitle="unspecified" OriginRelease="5.6.10.0" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org" />
+  <SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="5.6.10.0" LastWritingDateTime="2023-11-05T15:28:30.6290927+03:00" OriginProjectID="unspecified" OriginProjectTitle="unspecified" OriginRelease="5.6.10.0" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org" />
   <InstanceHierarchy Name="MyHierarchy">
     <Version>0</Version>
     <InternalElement Name="Line1" ID="3470580f-0142-404c-aa0b-20e4227a540d">
@@ -34,9 +34,15 @@
     <InterfaceClass Name="IPowerSupply" />
   </InterfaceClassLib>
   <RoleClassLib Name="MyRoleClassLib">
-    <Version>0</Version>
+    <Version>2.0</Version>
     <RoleClass Name="GenericRobot" />
     <RoleClass Name="GenericLineConveyor" />
+  </RoleClassLib>
+  <RoleClassLib Name="SensorsClassLib">
+    <Version>0</Version>
+    <RoleClass Name="TemperatureSensor" />
+    <RoleClass Name="PressureSensor" />
+    <RoleClass Name="PhSensor" />
   </RoleClassLib>
   <SystemUnitClassLib Name="MySystemUnitClassLib">
     <Version>0</Version>
