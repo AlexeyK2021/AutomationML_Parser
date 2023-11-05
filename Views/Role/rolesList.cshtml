@@ -18,6 +18,28 @@
                 {
                     <li>
                         RC: @rc.name
+                        @if (rc.attributes.Count > 0)
+                        {
+                            <p>Attributes:</p>
+                            
+                            foreach (var attrs in rc.attributes)
+                            {
+                                <ul>
+                                    @if (attrs.name != null)
+                                    {
+                                        <li>
+                                            Name:@attrs.name
+                                        </li>
+                                    }
+                                    @if (attrs.value != null)
+                                    {
+                                    <li>
+                                        Value:@attrs.value
+                                    </li>
+                                    }
+                                </ul>
+                            }
+                        }
                     </li>
                 }
             }

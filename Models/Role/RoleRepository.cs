@@ -1,4 +1,5 @@
-﻿using Aml.Engine.CAEX;
+﻿using System.Xml.Linq;
+using Aml.Engine.CAEX;
 using Aml.Engine.CAEX.Extensions;
 
 namespace amlWeb.Models.Role;
@@ -21,7 +22,22 @@ public class RoleRepository
             var roleClassList = new List<RoleClass>();
             foreach (var rc in rcl.CAEXChildren("RoleClass"))
             {
-                roleClassList.Add(new RoleClass(name: rc.Name()));
+                var attributes = new List<Attribute>();
+
+                foreach (var a in rc.Descendants<AttributeType>())
+                {
+                    if (a["Value"] != null)
+                    {
+                        attributes.Add(new Attribute(name: a.Name(), value: a["Value"].ToString()));
+                    }
+                }
+
+                roleClassList.Add(new RoleClass(name: rc.Name(), attributes: attributes));
+
+                // foreach (var VARIABLE in attributes)
+                // {
+                //     System.Diagnostics.Debug.WriteLine(VARIABLE.);
+                // }
             }
 
             roleClassLibsList.Add(new RoleClassLib(

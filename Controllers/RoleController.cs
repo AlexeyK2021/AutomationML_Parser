@@ -6,7 +6,6 @@ namespace amlWeb.Controllers;
 
 public class RoleController : Controller
 {
-    private readonly List<RoleClassType> roles;
 
     public ViewResult rolesList()
     {

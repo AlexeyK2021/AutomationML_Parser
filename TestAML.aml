@@ -1,6 +1,6 @@
 ﻿<CAEXFile SchemaVersion="3.0" FileName="TestAML.aml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.dke.de/CAEX" xsi:schemaLocation="http://www.dke.de/CAEX CAEX_ClassModel_V.3.0.xsd">
   <SuperiorStandardVersion>AutomationML 2.10</SuperiorStandardVersion>
-  <SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="5.6.10.0" LastWritingDateTime="2023-11-05T15:28:30.6290927+03:00" OriginProjectID="unspecified" OriginProjectTitle="unspecified" OriginRelease="5.6.10.0" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org" />
+  <SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="5.6.10.0" LastWritingDateTime="2023-11-05T17:42:07.2987478+03:00" OriginProjectID="unspecified" OriginProjectTitle="unspecified" OriginRelease="5.6.10.0" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org" />
   <InstanceHierarchy Name="MyHierarchy">
     <Version>0</Version>
     <InternalElement Name="Line1" ID="3470580f-0142-404c-aa0b-20e4227a540d">
@@ -35,12 +35,28 @@
   </InterfaceClassLib>
   <RoleClassLib Name="MyRoleClassLib">
     <Version>2.0</Version>
-    <RoleClass Name="GenericRobot" />
+    <RoleClass Name="GenericRobot">
+      <Attribute Name="Attribute" AttributeDataType="xs:string">
+        <DefaultValue>5</DefaultValue>
+        <Value>10</Value>
+      </Attribute>
+      <Attribute Name="Attribute2" AttributeDataType="xs:string">
+        <DefaultValue>4</DefaultValue>
+        <Value>12</Value>
+      </Attribute>
+    </RoleClass>
     <RoleClass Name="GenericLineConveyor" />
   </RoleClassLib>
   <RoleClassLib Name="SensorsClassLib">
     <Version>0</Version>
-    <RoleClass Name="TemperatureSensor" />
+    <RoleClass Name="TemperatureSensor">
+      <Attribute Name="MaxTemp" AttributeDataType="xs:string">
+        <Value>250</Value>
+      </Attribute>
+      <Attribute Name="MinTemp" AttributeDataType="xs:string">
+        <Value>-250</Value>
+      </Attribute>
+    </RoleClass>
     <RoleClass Name="PressureSensor" />
     <RoleClass Name="PhSensor" />
   </RoleClassLib>
