@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Attribute = amlWeb.Models.Attribute;
 
-namespace AML.Models.InternalElement;
+namespace amlWeb.Models.InternalElement;
 
 public class InternalElement
 {

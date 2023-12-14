@@ -1,48 +1,99 @@
-﻿@model List<AML.Models.InternalElement.InternalElement>
+﻿@using amlWeb.Models.InternalElement
+@model List<amlWeb.Models.InternalElement.InternalElement>
 
 <html>
 <head>
     <meta name="viewport" content="width-device-width"/>
-    <title>Roles List</title>
+    <title>Internal Elements List</title>
 </head>
 <body>
 @{
-    foreach (var ie in Model)
-    {
-        <summary>Name:@ie.name</summary>
-        <ul>
-            @{
-                foreach (var iie in ie.children)
-                {
-                    <li>
-                        RC: @iie.name
-                        @if (iie.attributes.Count > 0)
-                        {
-                            <p>Attributes:</p>
-                            
-                            foreach (var attrs in iie.attributes)
-                            {
-                                <ul>
-                                    @if (attrs.name != null)
-                                    {
-                                        <li>
-                                            Name:@attrs.name
-                                        </li>
-                                    }
-                                    @if (attrs.value != null)
-                                    {
-                                    <li>
-                                        Value:@attrs.value
-                                    </li>
-                                    }
-                                </ul>
-                            }
-                        }
-                    </li>
-                }
-            }
-        </ul>
-    }
+    @* foreach (var ie in Model) *@
+    @* { *@
+    @*     <summary>Name:@ie.name</summary> *@
+        @* <ul> *@
+        @*     @{ *@
+        @*         foreach (var iie in ie.children) *@
+        @*         { *@
+        @*             <li> *@
+        @*                 IE: @iie.name *@
+        @*                 @if (iie.attributes.Count > 0) *@
+        @*                 { *@
+        @*                     <p>Attributes:</p> *@
+        @*                      *@
+        @*                     foreach (var attrs in iie.attributes) *@
+        @*                     { *@
+        @*                         <ul> *@
+        @*                             @if (attrs.name != null) *@
+        @*                             { *@
+        @*                                 <li> *@
+        @*                                     Name:@attrs.name *@
+        @*                                 </li> *@
+        @*                             } *@
+        @*                             @if (attrs.value != null) *@
+        @*                             { *@
+        @*                             <li> *@
+        @*                                 Value:@attrs.value *@
+        @*                             </li> *@
+        @*                             } *@
+        @*                         </ul> *@
+        @*                     } *@
+        @*                 } *@
+        @*             </li> *@
+        @*         } *@
+        @*     } *@
+        @* </ul> *@
+        @* @ShowTree(ie.children); *@
+
+    <ul>
+        @foreach (var ie in Model)
+        {
+            RenderTreeNode(ie);
+        }
+    </ul>
 }
 
-<h2>title</h2>
+@* @helper ShowTree(IEnumerable<InternalElement> ieList) *@
+@* { *@
+@*     <ul> *@
+@*         @foreach (var ie in ieList) *@
+@*         { *@
+@*             <li> *@
+@*                 @ie.name *@
+@*                 @if (ie.children.Count > 0) *@
+@*                 { *@
+@*                     @ShowTree(ie.children) *@
+@*                 } *@
+@*             </li> *@
+@*         } *@
+@*     </ul> *@
+@* } *@
+
+@{
+    void RenderTreeNode(InternalElement node)
+    {
+        <li>
+            <strong>IE: @node.name</strong>
+            @if (node.attributes.Count > 0)
+            {
+                <summary>Attributes:</summary>
+                <ul>
+                    @foreach (var attr in node.attributes)
+                    {
+                        <p>@attr.name = @attr.value</p>
+                    }
+                </ul>
+            }
+            @if (node.children.Count > 0)
+            {
+                <ul>
+                    @foreach (var child in node.children)
+                    {
+                        RenderTreeNode(child);
+                    }
+                </ul>
+            }
+        </li>
+    }
+}
+</body>

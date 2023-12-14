@@ -3,7 +3,7 @@ using Aml.Engine.CAEX.Extensions;
 using amlWeb.Models.Role;
 using Attribute = amlWeb.Models.Attribute;
 
-namespace AML.Models.InternalElement;
+namespace amlWeb.Models.InternalElement;
 
 public class InternalElementRepository
 {

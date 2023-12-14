@@ -9,7 +9,8 @@ namespace amlWeb
 
             var app = builder.Build();
             app.Map("/", () => "Hello World!");
-            app.MapControllerRoute(name: "role", pattern: "{controller=Role}/{action=rolesList}");
+            // app.MapControllerRoute(name: "role", pattern: "{controller=Role}/{action=rolesList}");
+            app.MapControllerRoute(name: "internalElement", pattern: "{controller=InternalElement}/{action=ieList}");
             app.Run();
         }
     }

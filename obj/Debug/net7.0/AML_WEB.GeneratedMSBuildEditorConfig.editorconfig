@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Prog\C#\AML_WEB
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Prog/C\#/AML_WEB/Views/InternalElement/ieList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJuYWxFbGVtZW50XGllTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Prog/C\#/AML_WEB/Views/Role/rolesList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxyb2xlc0xpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
