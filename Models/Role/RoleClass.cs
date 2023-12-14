@@ -10,4 +10,8 @@ public class RoleClass
         this.name = name;
         this.attributes = attributes;
     }
+
+    public RoleClass()
+    {
+    }
 }

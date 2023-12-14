@@ -1,0 +1,48 @@
+﻿@model List<AML.Models.InternalElement.InternalElement>
+
+<html>
+<head>
+    <meta name="viewport" content="width-device-width"/>
+    <title>Roles List</title>
+</head>
+<body>
+@{
+    foreach (var ie in Model)
+    {
+        <summary>Name:@ie.name</summary>
+        <ul>
+            @{
+                foreach (var iie in ie.children)
+                {
+                    <li>
+                        RC: @iie.name
+                        @if (iie.attributes.Count > 0)
+                        {
+                            <p>Attributes:</p>
+                            
+                            foreach (var attrs in iie.attributes)
+                            {
+                                <ul>
+                                    @if (attrs.name != null)
+                                    {
+                                        <li>
+                                            Name:@attrs.name
+                                        </li>
+                                    }
+                                    @if (attrs.value != null)
+                                    {
+                                    <li>
+                                        Value:@attrs.value
+                                    </li>
+                                    }
+                                </ul>
+                            }
+                        }
+                    </li>
+                }
+            }
+        </ul>
+    }
+}
+
+<h2>title</h2>

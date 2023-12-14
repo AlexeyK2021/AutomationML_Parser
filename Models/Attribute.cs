@@ -1,4 +1,6 @@
-﻿namespace amlWeb.Models;
+﻿using System.Xml.Linq;
+
+namespace amlWeb.Models;
 
 public class Attribute
 {
@@ -9,5 +11,11 @@ public class Attribute
     {
         this.name = name;
         this.value = value;
+    }
+
+    public Attribute(XElement roleAttr)
+    {
+        name = roleAttr.Attribute("Name").Value;
+        value = roleAttr.Value;
     }
 }

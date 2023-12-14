@@ -15,31 +15,39 @@ public class RoleRepository
         parse();
     }
 
-    public void parse()
+    private void parse()
     {
         foreach (var rcl in file.CAEXFile.RoleClassLib)
         {
             var roleClassList = new List<RoleClass>();
-            foreach (var rc in rcl.CAEXChildren("RoleClass"))
-            {
-                var attributes = new List<Attribute>();
-
-                foreach (var a in rc.Descendants<AttributeType>())
+            // foreach (var rc in rcl.CAEXChildren("RoleClass"))
+            // {
+                // var attributes = new List<Attribute>();
+            
+                // foreach (var a in rc.Descendants<AttributeType>())
+                // {
+                //     if (a["Value"] != null)
+                //     {
+                //         attributes.Add(new Attribute(name: a.Name(), value: a["Value"].ToString()));
+                //     }
+                // }
+                var attrList = new List<Attribute>();
+                foreach (var role in rcl.RoleClass)
                 {
-                    if (a["Value"] != null)
+                    foreach (var roleAttr in role.Attribute.Elements)
                     {
-                        attributes.Add(new Attribute(name: a.Name(), value: a["Value"].ToString()));
+                        attrList.Add(new Attribute(roleAttr));
                     }
                 }
-
-                roleClassList.Add(new RoleClass(name: rc.Name(), attributes: attributes));
-
+            
+                // roleClassList.Add(new RoleClass(name: rc.Name(), attributes: attrList));
+            
                 // foreach (var VARIABLE in attributes)
                 // {
                 //     System.Diagnostics.Debug.WriteLine(VARIABLE.);
                 // }
-            }
-
+            // }
+            
             roleClassLibsList.Add(new RoleClassLib(
                 name: rcl.Name(),
                 version: rcl.Version,
